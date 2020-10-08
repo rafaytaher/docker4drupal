@@ -1,4 +1,4 @@
-#FROM drupal:9.0.7-fpm-alpine
+FROM drupal:9.0.7-fpm-alpine
 
 ## Install Node, NVM, NPM and Grunt
 #
