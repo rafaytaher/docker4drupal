@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+docker-compose up -d && \
+version=$(git describe --tags $(git rev-list --tags --max-count=1))
+echo "
+===================== 🚀 Done 🚀 ===================
+
+      Created by Rafay Taher
+      v.$version
+      Access your new links:
+
+      🌎 Web server: http://drupal8.local/
+      ✉️ Local emails: http://drupal8.local:8025
+
+===================== 🚀 Done 🚀 ==================="

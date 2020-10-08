@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="27dc917c-0306-4fbf-90c2-cbb2e3f51f12" name="drupal8_server" url="http://drupal8.local">
+        <fileTransfer rootFolder="/home/ubuntu/drupal8/" accessType="SFTP" host="mywin.local" port="22" sshConfigId="d52ab3cf-9aff-45be-a0e3-582442b16274" sshConfig="ubuntu@mywin.local:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

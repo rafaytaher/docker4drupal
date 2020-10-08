@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+    db:
+      image: mariadb
+      ports:
+        - 3306:3306
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=drupal
+        - MYSQL_USER=drupal
+        - MYSQL_PASSWORD=drupal
+      volumes:
+        - db-data:/var/lib/mysql
+      networks:
+        - network
+
+    drupal:
+      #image: drupal:9.0.6-fpm-alpine
+      build:
+        php-fpm
+      container_name: drupal
+      depends_on:
+        - db
+      restart: unless-stopped
+      networks:
+        - network
+      volumes:
+        - ./drupal-data:/var/www/html/
+
+    webserver:
+      image: nginx:1.17.4-alpine
+      container_name: webserver
+      depends_on:
+        - drupal
+      restart: unless-stopped
+      ports:
+        - "80:80" # web
+        - "9001:9001" # xdebug
+        # - "35729:35729" # live reload
+      networks:
+        - network
+      volumes:
+        - ./drupal-data:/var/www/html
+        - ./nginx-conf:/etc/nginx/conf.d
+      environment:
+        XDEBUG_CONFIG: "remote_host=localhost"
+        PHP_IDE_CONFIG: "serverName=Docker"
+    mailhog:
+      image: mailhog/mailhog
+      ports:
+        - 1025:1025
+        - 8025:8025
+      networks:
+        - network
+
+networks:
+  network:
+    driver: bridge
+volumes:
+  drupal-data:
+  db-data:
