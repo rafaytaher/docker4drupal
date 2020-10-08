@@ -10,7 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3099c58a-d519-47e3-bbbb-8de6862a4188" name="Default Changelist" comment="" />
+    <list default="true" id="3099c58a-d519-47e3-bbbb-8de6862a4188" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drupal-data/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx-conf/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx-conf/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php-fpm/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/php-fpm/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,9 +42,13 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/drupal-data/sites/default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\drupal8\drupal-data\sites\default" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\drupal8\php-fpm" />
     </key>
@@ -54,7 +64,7 @@
       <workItem from="1602055588073" duration="397000" />
       <workItem from="1602056013152" duration="22674000" />
       <workItem from="1602102797270" duration="7285000" />
-      <workItem from="1602141423173" duration="3967000" />
+      <workItem from="1602141423173" duration="8309000" />
     </task>
     <servers />
   </component>
