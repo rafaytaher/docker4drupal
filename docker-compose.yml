@@ -16,9 +16,9 @@ services:
         - network
 
     drupal:
-      #image: drupal:9.0.6-fpm-alpine
-      build:
-        php-fpm
+      image: drupal:9.0.7-fpm-alpine
+      #build:
+        #php-fpm
       container_name: drupal
       depends_on:
         - db
