@@ -22,7 +22,7 @@ services:
       container_name: drupal
       depends_on:
         - db
-      restart: unless-stopped
+      #restart: unless-stopped
       networks:
         - network
       volumes:
@@ -33,7 +33,7 @@ services:
       container_name: webserver
       depends_on:
         - drupal
-      restart: unless-stopped
+      #restart: unless-stopped
       ports:
         - "80:80" # web
         - "9001:9001" # xdebug

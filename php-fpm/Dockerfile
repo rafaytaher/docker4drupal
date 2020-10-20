@@ -1,4 +1,4 @@
-FROM drupal:9.0.7-fpm-alpine
+FROM drupal:8.9.7-fpm-alpine
 
 ## Install Node, NVM, NPM and Grunt
 #
@@ -21,7 +21,6 @@ RUN curl -sL https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 ADD config/php.ini $PHP_INI_DIR/
 
-RUN chmod 777 -Rf /var/www /var/www/.*
 VOLUME /var/www/html
 WORKDIR /var/www/html
 CMD ["php-fpm", "-F"]
